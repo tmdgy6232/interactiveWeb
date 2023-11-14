@@ -1,10 +1,40 @@
 @charset "utf-8";
 @import url('https://fonts.googleapis.com/css2?family=Maven+Pro&family=Noto+Sans+KR:wght@300;700&family=Unna&display=swap');
 
+/*reset*/
+* {margin: 0;padding: 0;}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, tbody, tfoot, thead, tr, th, td{margin:0;padding:0;}
+h1, h2, h3, h4, h5, h6 {font-weight: 700; font-size: inherit;}
+a {color: inherit; text-decoration: inherit;}
+img {vertical-align: middle;}
+a img {border: none;}
+li {list-style: none;}
+address, em, i {font-style: normal;}
+a:focus {outline: none}
+button:focus {outline: none}
+
 
 /*layout*/
-body {
-    font-family: 'Maven Pro', sans-serif;
-    font-family: 'Noto Sans KR', sans-serif;
-    font-family: 'Unna', serif;
+body {font-family: 'Noto Sans KR', sans-serif; background: #ddd; font-size: 14px; color: #000; line-height: 1.4;}
+.en {font-family: 'Unna', serif;}
+.en_1{font-family: 'Maven Pro', sans-serif;}
+
+.wrap{
+    width: 100%; margin: 0, auto; overflow: hidden;
 }
+
+/*header*/
+header{
+    width: 100%; background: red; padding: 0, 40px; box-sizing: border-box; height: 100px; line-height: 100px; color: #fff; z-index: 100; position: fixed;
+    top: 0; transition: all 0.5s;
+}
+
+header .menuOpen{
+    display: inline-block; position: absolute;
+    top: 50%; transform: translateY(-50%); width: 40px; height: 16px; line-height: 100px;
+    background: blue;
+}
+
+header .menuOpen span{display: block; width: 100%; height: 1px; background: #fff; position: absolute; top: 0; left: 0;}
+header .menuOpen span.mid{top: 50%;}
+header .menuOpen span.bot{top: 100%;}
